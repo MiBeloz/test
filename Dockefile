@@ -5,4 +5,4 @@ FROM ubuntu:20.04
 	WORKDIR /root/test/
 	COPY main.cpp 1.txt 2.txt .
 	RUN g++ main.cpp -o main_gpp
-	CMD ["./main_gpp MishaMisha"]
+	CMD ["./main_gpp ggshaggsha"]

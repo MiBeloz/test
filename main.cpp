@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
         while (pos != std::string::npos) {
             pos = data.find(arg[1]);
             if (pos != std::string::npos) {
-                data.replace(pos, arg[2].size(), arg[2]);
+                data.replace(pos, arg[1].size(), arg[2]);
                 writeFile(file, data);
             }
         }
