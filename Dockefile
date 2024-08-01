@@ -1,0 +1,8 @@
+FROM ubuntu:20.04
+	LABEL maintainer="mihabeloz@gmail.com"
+	RUN apt update -y && apt upgrade -y
+	RUN apt install -y g++
+	WORKDIR /root/test/
+	COPY main.cpp 1.txt 2.txt .
+	RUN g++ main.cpp -o main_gpp
+	CMD ["./main_gpp Dima Misha"]
