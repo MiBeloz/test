@@ -23,10 +23,13 @@ int main(int argc, char* argv[]) {
 
     for (auto& file : foundFiles) {
         std::string data = readFile(file);
-        auto pos = data.find(arg[1]);
-        if (pos != std::string::npos) {
-            data.replace(pos, arg[2].size(), arg[2]);
-            writeFile(file, data);
+        size_t pos = 0;
+        while (pos != std::string::npos) {
+            pos = data.find(arg[1]);
+            if (pos != std::string::npos) {
+                data.replace(pos, arg[2].size(), arg[2]);
+                writeFile(file, data);
+            }
         }
     }
 }
